@@ -37,7 +37,7 @@
                     <div class="carousel-item active" data-bs-interval="5000">
                         <img src="{{asset('storage/app-images/banner-1.jpg')}}" class="d-block w-100 banner-img" alt="Banner 1">
                         <div class="carousel-caption">
-                            <h2>Temporary Test Slide</h2>
+                            <h2>Temporary Test Slidess</h2>
 {{--                            <p>This may showcase a specific course / lesson</p>--}}
                         </div>
                     </div>
