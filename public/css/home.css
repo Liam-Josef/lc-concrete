@@ -1,0 +1,58 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: contents !important;
+        flex-basis: auto;
+    }
+}
+.bg-primary {
+    background-color: #38537F !important;
+}
+.text-primary {
+    color: #38537f !important;
+}
+.img-responsive {
+    width: 100% !important;
+}
+.btn-100 {
+    width: 100% !important;
+}
+.banner-container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.white-back {
+    background-color: rgba(255,255,255,.7);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px
+}
+.page-title-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.page-title-image img {
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.page-title-image .overlay-text{
+    position: absolute;
+    right: 10%;         /* text-right */
+    bottom: 20%;        /* move where you want it */
+    z-index: 2;
+    color: #fff;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    background: rgba(0,0,0,.25);  /* optional: improve contrast */
+    border-radius: .375rem;
+}
