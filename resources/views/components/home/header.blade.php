@@ -14,14 +14,43 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item {{ Request::is('/*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{route('home.index')}}">Main</a>
+                {{-- Main --}}
+                <li class="nav-item">
+                    @if(request()->routeIs('home.index'))
+                        <span class="nav-link active" aria-current="page">
+                        Main
+                    </span>
+                    @else
+                        <a class="nav-link" href="{{ route('home.index') }}">
+                            Main
+                        </a>
+                    @endif
                 </li>
-                <li class="nav-item {{ Request::is('courses*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{route('home.portfolio')}}">Portfolio</a>
+
+                {{-- Portfolio --}}
+                <li class="nav-item">
+                    @if(request()->routeIs('home.portfolio'))
+                        <span class="nav-link active" aria-current="page">
+                        Portfolio
+                    </span>
+                    @else
+                        <a class="nav-link" href="{{ route('home.portfolio') }}">
+                            Portfolio
+                        </a>
+                    @endif
                 </li>
-                <li class="nav-item {{ Request::is('courses*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{route('home.contact')}}">Contact</a>
+
+                {{-- Contact --}}
+                <li class="nav-item">
+                    @if(request()->routeIs('home.contact'))
+                        <span class="nav-link active" aria-current="page">
+                        Contact
+                    </span>
+                    @else
+                        <a class="nav-link" href="{{ route('home.contact') }}">
+                            Contact
+                        </a>
+                    @endif
                 </li>
                 <li class="nav-item">
                     &nbsp;
