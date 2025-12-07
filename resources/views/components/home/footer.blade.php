@@ -19,7 +19,7 @@
     <!-- /.container -->
     <div class="footer-bottom p-1">
         <p class="m-0 text-center text-white pb-2">
-            Copyright &copy; L&C Concrete {{ date('Y') }}
+            Copyright &copy; {{$settings->app_name}} {{ date('Y') }}
             <span style="display: none">Built by <a href="https://liamjosef.com/" target="_blank" class="text-white">Liam Josef</a></span>
         </p>
 
