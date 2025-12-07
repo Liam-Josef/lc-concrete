@@ -1,11 +1,11 @@
 <x-home-fullscreen-index>
 
     @section('page-title')
-        Login | MEX Learning
+        Login | Lakai Concrete
     @endsection
 
     @section('description')
-        Merchants Exchange Learning Management System Login Page
+       Lakai Concrete
     @endsection
 
     @section('favicon')
@@ -80,7 +80,8 @@
                                                 </button>
                                             </div>
                                             <div class="col-sm-6">
-                                                <a href="{{route('student.register')}}" class="btn btn-secondary btn-100">Register</a>
+{{--                                                <a href="{{route('student.register')}}" class="btn btn-secondary btn-100">Register</a>--}}
+                                                <a href="{{route('home.index')}}" class="btn btn-secondary btn-100">Cancel</a>
                                             </div>
                                         </div>
 

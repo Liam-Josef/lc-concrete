@@ -18,10 +18,10 @@
                     <a class="nav-link" href="{{route('home.index')}}">Main</a>
                 </li>
                 <li class="nav-item {{ Request::is('courses*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{route('home.courses')}}">Portfolio</a>
+                    <a class="nav-link" href="{{route('home.portfolio')}}">Portfolio</a>
                 </li>
                 <li class="nav-item {{ Request::is('courses*') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{route('home.courses')}}">Contact</a>
+                    <a class="nav-link" href="{{route('home.contact')}}">Contact</a>
                 </li>
                 <li class="nav-item">
                     &nbsp;

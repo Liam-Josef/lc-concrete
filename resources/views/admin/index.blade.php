@@ -1,7 +1,7 @@
 <x-admin-master>
 
     @section('page-title')
-        Dashboard | MEX LMS Admin
+        Dashboard | {{$settings->app_name}} Admin
     @endsection
 
     @section('styles')

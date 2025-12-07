@@ -1,5 +1,5 @@
 <x-admin-master>
-    @section('page-title') Pages | MEX Learning Admin @endsection
+    @section('page-title') Pages | {{$settings->app_name}} Admin @endsection
 
     @section('favicon')
         {{asset('/storage/app-images/favicon.png')}}
