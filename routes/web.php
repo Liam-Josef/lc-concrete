@@ -20,6 +20,13 @@ use App\Http\Controllers\Auth\LoginController;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 use App\Http\Controllers\HomeController;
 
+Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('home.portfolio');
+Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+
+
+
+
+
 Route::get('/courses', [HomeController::class, 'courses'])->name('home.courses');
 Route::get('/courses/{course}', [HomeController::class, 'courseShow'])->name('home.courses.show');
 Route::get('/lessons/{lesson}', [HomeController::class, 'course_lesson'])->name('home.course_lesson');

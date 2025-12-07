@@ -1,7 +1,7 @@
 <x-admin-master>
 
     @section('page-title')
-    {{$user->name}} Profile | MEX LMS Admin
+    {{$user->name}} Profile | {{$settings->app_name}} Admin
     @endsection
 
     @section('favicon')

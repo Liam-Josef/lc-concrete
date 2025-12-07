@@ -1,7 +1,7 @@
 <x-admin-master>
 
     @section('page-title')
-        Pages | MEX Learning Admin
+        Pages | {{$settings->app_name}} Admin
     @endsection
 
     @section('favicon')

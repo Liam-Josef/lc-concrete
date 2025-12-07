@@ -30,23 +30,20 @@ class HomeController extends Controller
     {
         $news = News::latest()->get();
 
-        // Find the Shipping Education Series course (case-insensitive), eager-load lessons
-        $shippingCourse = Course::with(['lessons' => function ($q) {
-            $q->where('is_active', 1)
-                ->orderBy('id');
-        }])
-            ->where('is_active', 1)
-            ->whereRaw('LOWER(title) = ?', ['shipping education series'])
-            ->first();
 
-        // Any additional courses, excluding the shipping series
-        $otherCourses = Course::where('is_active', 1)
-            ->when($shippingCourse, fn ($q) => $q->where('id', '!=', $shippingCourse->id))
-            ->orderBy('title')
-            ->get();
-
-        return view('home.index', compact('news', 'shippingCourse', 'otherCourses'));
+        return view('home.index', compact('news'));
     }
+
+    public function portfolio() {
+        return view('home.business.portfolio.index');
+    }
+
+    public function contact() {
+        return view('home.business.contact.index');
+    }
+
+
+
     public function courses()
     {
         $shippingCourse = \App\Models\Course::where('title', 'Shipping Education Series')->first();
