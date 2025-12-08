@@ -32,11 +32,12 @@
             }
             .home-slider .carousel-item h2,
             .home-slider .carousel-item h3 {
-                color: #02066F;
+                color: #ffffff;
                 font-weight: 600;
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* 3px horizontal, 3px vertical, 5px blur, semi-transparent black */
             }
             .home-slider .carousel-item p {
-                color: #02066F;
+                color: #ffffff;
                 font-weight: 600;
             }
 
@@ -147,28 +148,28 @@
 
                 <!-- Slides -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="{{asset('storage/app-images/banner-1.jpg')}}" class="d-block w-100 banner-img" alt="Banner 1">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="{{asset('storage/app-images/carousel-home-before.jpg')}}" class="d-block w-100 banner-img" alt="Banner 1">
                         <div class="carousel-caption">
-                            <h2>Premium Concrete Contactor</h2>
+                            <h2>Is it time for a refresh?</h2>
 {{--                            <p>in Portland, OR</p>--}}
                         </div>
                     </div>
 
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img src="{{asset('storage/app-images/banner-2.jpg')}}" class="d-block w-100 banner-img" alt="Banner 2">
+                        <img src="{{asset('storage/app-images/carousel-home-after.jpg')}}" class="d-block w-100 banner-img" alt="Banner 2">
                         <div class="carousel-caption">
                             <h2>Call us today!</h2>
-                            <a href="{{$settings->company_phone}}" class="btn btn-primary btn-center mt-2">{{$settings->company_phone}}</a>
+                            <a href="{{$settings->company_phone}}" class="btn btn-primary btn-center mt-2">Call Now</a>
 {{--                            <p>This may showcase a specific course / lesson</p>--}}
                         </div>
                     </div>
 
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="{{asset('storage/app-images/banner-3.jpg')}}" class="d-block w-100 banner-img" alt="Banner 3">
+                    {{-- 2: duplicate of first (loop helper) --}}
+                    <div class="carousel-item carousel-duplicate-first" data-bs-interval="2000">
+                        <img src="{{asset('storage/app-images/carousel-home-before.jpg')}}" class="d-block w-100 banner-img" alt="Banner 1 duplicate">
                         <div class="carousel-caption">
-                            <h2>Get a Free Quote</h2>
-                            <a href="#" class="btn btn-primary btn-center mt-2">Get Quote</a>
+                            <h2>Is it time for a refresh?</h2>
                         </div>
                     </div>
                 </div>
@@ -257,7 +258,7 @@
                             {{-- 1 --}}
                             <div class="portfolio-slide">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/temp-1.jpg') }}"
+                                    <img src="{{ asset('storage/portfolio/port-images/img-11.jpg') }}"
                                          class="card-img-top"
                                          alt="Freshly poured concrete driveway in front of a home">
                                     <div class="card-body p-3">
@@ -270,7 +271,7 @@
                             {{-- 2 --}}
                             <div class="portfolio-slide">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/temp-2.jpg') }}"
+                                    <img src="{{ asset('storage/portfolio/final/img-2.jpg') }}"
                                          class="card-img-top"
                                          alt="Stamped concrete patio with outdoor furniture">
                                     <div class="card-body p-3">
@@ -283,7 +284,20 @@
                             {{-- 4 --}}
                             <div class="portfolio-slide">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/temp-4.jpg') }}"
+                                    <img src="{{ asset('storage/portfolio/port-images/img-12.jpg') }}"
+                                         class="card-img-top"
+                                         alt="Concrete stairs and entry landing">
+                                    <div class="card-body p-3">
+                                        <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>
+                                        <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- 4 --}}
+                            <div class="portfolio-slide">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <img src="{{ asset('storage/portfolio/port-images/img-13.jpg') }}"
                                          class="card-img-top"
                                          alt="Concrete stairs and entry landing">
                                     <div class="card-body p-3">
@@ -296,7 +310,7 @@
                             {{-- 5 --}}
                             <div class="portfolio-slide">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/temp-5.jpg') }}"
+                                    <img src="{{ asset('storage/portfolio/final/img-5.jpg') }}"
                                          class="card-img-top"
                                          alt="Backyard concrete patio surrounding a fire pit">
                                     <div class="card-body p-3">
@@ -306,28 +320,28 @@
                                 </div>
                             </div>
 
-                            {{-- 6 (temp-8) --}}
+                            {{-- 6 --}}
                             <div class="portfolio-slide">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/temp-8.jpg') }}"
+                                    <img src="{{ asset('storage/portfolio/final/img-6.jpg') }}"
                                          class="card-img-top"
-                                         alt="Concrete garden path next to landscaping">
+                                         alt="Backyard concrete patio surrounding a fire pit">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Garden Path</h5>
-                                        <p class="card-text small text-muted mb-0">Clean lines tying into landscape.</p>
+                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
+                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            {{-- 7 (temp-9) --}}
+                            {{-- 7 --}}
                             <div class="portfolio-slide">
                                 <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/temp-9.jpg') }}"
+                                    <img src="{{ asset('storage/portfolio/final/img-7.jpg') }}"
                                          class="card-img-top"
-                                         alt="Concrete slab prepared for a shed or small structure">
+                                         alt="Backyard concrete patio surrounding a fire pit">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Shed Slab</h5>
-                                        <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>
+                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
+                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
                                     </div>
                                 </div>
                             </div>

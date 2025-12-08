@@ -4,8 +4,9 @@
             <img src="{{ asset('storage/' . (($settings->logo ?? null) ?: 'app-images/mex-learning-logo.png')) }}">
         </div>
         <p class="m-0 text-center text-white mb-3">
-            <a href="#" class="mr-3"><i class="fab fa-facebook fa-2x"></i>
-            <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+            <a href="https://www.facebook.com/lakaiconcrete/" target="_blank" class="mr-3"><i class="fab fa-facebook fa-2x"></i>
+            <a href="https://www.instagram.com/lakaiconcrete/" target="_blankd" class="mr-3"><i class="fab fa-instagram fa-2x"></i>
+            <a href="https://share.google/wMHiDQUcqVvCgwARo" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>
         </p>
 {{--        <p class="m-0 text-center text-white">--}}
 {{--            <a href="#">About</a> &nbsp; | &nbsp;--}}
