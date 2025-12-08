@@ -36,7 +36,7 @@
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="fw-bold text-black">Contact Us Anytime!</h2>
-                    <p class="text-muted mb-0">
+                    <p class="mb-0">
                         If you have any questions or concerns, please feel free to contact us. We are here to help!
                     </p>
                 </div>

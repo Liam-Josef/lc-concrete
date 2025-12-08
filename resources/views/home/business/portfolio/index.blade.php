@@ -38,6 +38,11 @@
                     break-inside: avoid;
                     margin-bottom: 1.25rem;
                 }
+                .masonry-item .card {
+                    break-inside: avoid;
+                    margin-bottom: 1.25rem;
+                    padding-bottom: 10px;
+                }
 
                 .portfolio-nav {
                     position: fixed;                /* relative to viewport */
@@ -88,7 +93,7 @@
                 <div class="row mb-4">
                     <div class="col-12 text-center">
                         <h2 class="fw-bold text-black">Recent Concrete Projects</h2>
-                        <p class="text-muted mb-0">
+                        <p class="mb-0">
                             Driveways, patios, walkways &amp; custom flatwork for residential homes.
                         </p>
                     </div>
@@ -98,91 +103,156 @@
                     <!-- 1 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-1.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-11.jpg')}}"
                                  class="card-img-top"
                                  alt="Freshly poured concrete driveway in front of a home">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">New Concrete Driveway</h5>
-                                <p class="card-text small text-muted mb-0">Clean, durable finish for everyday use.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">New Concrete Driveway</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Clean, durable finish for everyday use.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
                     <!-- 2 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-2.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-12.jpg')}}"
                                  class="card-img-top"
                                  alt="Stamped concrete patio with outdoor furniture">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">Stamped Concrete Patio</h5>
-                                <p class="card-text small text-muted mb-0">Stamped pattern to mimic stone.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Stamped Concrete Patio</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Stamped pattern to mimic stone.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
                     <!-- 3 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-3.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-13.jpg')}}"
                                  class="card-img-top"
                                  alt="Concrete walkway leading to a front door">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">Front Walkway</h5>
-                                <p class="card-text small text-muted mb-0">Smooth finish with crisp edges.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Front Walkway</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Smooth finish with crisp edges.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
                     <!-- 4 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-4.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-14.jpg')}}"
                                  class="card-img-top"
                                  alt="Concrete stairs and entry landing">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>
-                                <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
                     <!-- 5 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-5.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-17.jpg')}}"
                                  class="card-img-top"
                                  alt="Backyard concrete patio surrounding a fire pit">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Backyard Entertaining Space</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
                     <!-- 8 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-8.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-18.jpg')}}"
                                  class="card-img-top"
                                  alt="Concrete garden path next to landscaping">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">Garden Path</h5>
-                                <p class="card-text small text-muted mb-0">Clean lines tying into landscape.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Garden Path</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Clean lines tying into landscape.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
                     <!-- 9 -->
                     <div class="masonry-item">
                         <div class="card border-0 shadow-sm">
-                            <img src="{{asset('storage/portfolio/temp-9.jpg')}}"
+                            <img src="{{asset('storage/portfolio/port-images/img-1.jpg')}}"
                                  class="card-img-top"
                                  alt="Concrete slab prepared for a shed or small structure">
-                            <div class="card-body p-3">
-                                <h5 class="card-title mb-1">Shed Slab</h5>
-                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>
-                            </div>
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Shed Slab</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="masonry-item">
+                        <div class="card border-0 shadow-sm">
+                            <img src="{{asset('storage/portfolio/port-images/img-4.jpg')}}"
+                                 class="card-img-top"
+                                 alt="Concrete slab prepared for a shed or small structure">
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Shed Slab</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="masonry-item">
+                        <div class="card border-0 shadow-sm">
+                            <img src="{{asset('storage/portfolio/port-images/img-5.jpg')}}"
+                                 class="card-img-top"
+                                 alt="Concrete slab prepared for a shed or small structure">
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Shed Slab</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="masonry-item">
+                        <div class="card border-0 shadow-sm">
+                            <img src="{{asset('storage/portfolio/port-images/img-7.jpg')}}"
+                                 class="card-img-top"
+                                 alt="Concrete slab prepared for a shed or small structure">
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Shed Slab</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="masonry-item">
+                        <div class="card border-0 shadow-sm">
+                            <img src="{{asset('storage/portfolio/port-images/img-15.jpg')}}"
+                                 class="card-img-top"
+                                 alt="Concrete slab prepared for a shed or small structure">
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Shed Slab</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="masonry-item">
+                        <div class="card border-0 shadow-sm">
+                            <img src="{{asset('storage/portfolio/port-images/img-16.jpg')}}"
+                                 class="card-img-top"
+                                 alt="Concrete slab prepared for a shed or small structure">
+{{--                            <div class="card-body p-3">--}}
+{{--                                <h5 class="card-title mb-1">Shed Slab</h5>--}}
+{{--                                <p class="card-text small text-muted mb-0">Level slab ready for a new structure.</p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
 
@@ -226,7 +296,7 @@
                              class="img-fluid w-100 d-block">
 
                         <!-- Caption area -->
-                        <div class="p-3">
+                        <div class="p-3" style="display: none">
                             <h5 id="portfolioModalTitle" class="mb-1"></h5>
                             <p id="portfolioModalCaption" class="small mb-0 text-muted"></p>
                         </div>
