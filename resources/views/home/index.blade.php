@@ -349,7 +349,7 @@
                         <img src="{{asset('storage/app-images/carousel-home-after.jpg')}}" class="d-block w-100 banner-img" alt="Banner 2">
                         <div class="carousel-caption">
                             <h2>Call us today!</h2>
-                            <a href="{{$settings->company_phone}}" class="btn btn-primary btn-center mt-2">Call Now</a>
+                            <a href="tel:{{$settings->company_phone}}" class="btn btn-primary btn-center mt-2">Call Now</a>
 {{--                            <p>This may showcase a specific course / lesson</p>--}}
                         </div>
                     </div>
