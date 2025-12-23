@@ -124,6 +124,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 @yield('scripts')
 
@@ -233,6 +234,29 @@
         });
         mo.observe(document.documentElement, { childList: true, subtree: true });
     })();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('mainNav');
+        const collapseEl = document.getElementById('navbarResponsive');
+        if (!nav || !collapseEl) return;
+
+        collapseEl.addEventListener('show.bs.collapse', () => nav.classList.add('nav-open'));
+        collapseEl.addEventListener('hidden.bs.collapse', () => nav.classList.remove('nav-open'));
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const collapseEl = document.getElementById('navbarResponsive');
+        if (!collapseEl || !window.bootstrap) return;
+
+        collapseEl.querySelectorAll('a.nav-link').forEach(a => {
+            a.addEventListener('click', () => {
+                const inst = bootstrap.Collapse.getOrCreateInstance(collapseEl);
+                inst.hide();
+            });
+        });
+    });
 </script>
 
 

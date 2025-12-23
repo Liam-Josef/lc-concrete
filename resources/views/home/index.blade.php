@@ -131,6 +131,195 @@
             .portfolio-nav:focus {
                 outline: none;
             }
+
+            /* Before/After slider */
+            @media (max-width: 768px) {
+                .before-after-slider-wrapper .card-img-top {
+                    height: 200px;
+                }
+                .ba-modal-panel img {
+                    height: 240px;
+                }
+            }
+
+            .before-after-slider-wrapper .card-img-top {
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+            }
+
+            .ba-modal-panel img {
+                width: 100%;
+                height: 320px;
+                object-fit: cover;
+            }
+
+            .before-after-slider-wrapper {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+            }
+
+            .before-after-slider-track {
+                display: flex;
+                transition: transform 0.4s ease;
+                will-change: transform;
+            }
+
+            .before-after-slide {
+                flex: 0 0 100%;      /* 1 pair per "page" */
+                padding: 0.5rem 0;
+            }
+
+            .before-card,
+            .after-card {
+                cursor: pointer;
+            }
+
+            /* Slider arrows */
+            .before-after-slider-nav {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background: rgba(0, 0, 0, 0.45);
+                color: #fff;
+                font-size: 2rem;
+                line-height: 1;
+                padding: 0.25rem 0.75rem;
+                cursor: pointer;
+                z-index: 5;
+            }
+            .before-after-slider-prev {
+                left: 10px;
+            }
+            .before-after-slider-next {
+                right: 10px;
+            }
+            .before-after-slider-nav:focus {
+                outline: none;
+            }
+
+            /* Modal arrows */
+            .before-after-modal-nav {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background: rgba(0, 0, 0, 0.45);
+                color: #fff;
+                font-size: 2.5rem;
+                line-height: 1;
+                padding: 0.25rem 0.75rem;
+                cursor: pointer;
+                z-index: 20;
+            }
+            .before-after-modal-prev {
+                left: 10px;
+            }
+            .before-after-modal-next {
+                right: 10px;
+            }
+            .before-after-modal-nav:focus {
+                outline: none;
+            }
+
+            /* Same height in slider */
+            .before-after-slider-wrapper .card-img-top {
+                width: 100%;
+                height: 260px;       /* tweak to taste */
+                object-fit: cover;
+            }
+
+            /* Same height in modal */
+            .before-after-modal-track img {
+                width: 100%;
+                height: 320px;       /* tweak to taste */
+                object-fit: cover;
+            }
+
+            /* Modal track */
+            .before-after-modal-track-wrapper {
+                overflow: hidden;
+                width: 100%;
+            }
+
+            .before-after-modal-track {
+                display: flex;
+                transition: transform 0.4s ease;
+                will-change: transform;
+            }
+
+            .before-after-modal-track.no-transition {
+                transition: none;
+            }
+
+            .before-after-modal-slide {
+                flex: 0 0 100%;      /* 1 pair per view */
+                padding: 0.5rem 0;
+            }
+
+            /* Modal arrows */
+            .before-after-modal-nav {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background: rgba(0, 0, 0, 0.45);
+                color: #fff;
+                font-size: 2.5rem;
+                line-height: 1;
+                padding: 0.25rem 0.75rem;
+                cursor: pointer;
+                z-index: 20;
+            }
+            .before-after-modal-prev {
+                left: 10px;
+            }
+            .before-after-modal-next {
+                right: 10px;
+            }
+            .before-after-modal-nav:focus {
+                outline: none;
+            }
+            /* Same height in slider cards */
+            .before-after-slider-wrapper .card-img-top {
+                width: 100%;
+                height: 260px;       /* tweak as you like */
+                object-fit: cover;
+            }
+
+            /* Lightbox image */
+            .ba-lightbox-image {
+                max-height: 70vh;
+                object-fit: contain;
+            }
+
+            /* Lightbox arrows */
+            .ba-lightbox-nav {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background: rgba(0, 0, 0, 0.45);
+                color: #fff;
+                font-size: 2.5rem;
+                line-height: 1;
+                padding: 0.25rem 0.75rem;
+                cursor: pointer;
+                z-index: 20;
+            }
+            .ba-lightbox-prev {
+                left: 10px;
+            }
+            .ba-lightbox-next {
+                right: 10px;
+            }
+            .ba-lightbox-nav:focus {
+                outline: none;
+            }
+
+
         </style>
     @endsection
 
@@ -262,8 +451,10 @@
                                          class="card-img-top"
                                          alt="Freshly poured concrete driveway in front of a home">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">New Concrete Driveway</h5>
-                                        <p class="card-text small text-muted mb-0">Clean, durable finish for everyday use.</p>
+                                        <h5 class="card-title mb-1">Stamped Concrete Slab</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Decorative stamped concrete driveway featuring a textured stone-style pattern for added traction and visual appeal. Combines durability with an upscale look that elevates curb appeal.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -275,8 +466,10 @@
                                          class="card-img-top"
                                          alt="Stamped concrete patio with outdoor furniture">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Stamped Concrete Patio</h5>
-                                        <p class="card-text small text-muted mb-0">Stamped pattern to mimic stone.</p>
+                                        <h5 class="card-title mb-1">Smooth-Finish Concrete Slab</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Freshly poured smooth-finish concrete slab for a clean, durable surface that’s perfect for garage aprons and driveway extensions. Built for long-lasting performance with a crisp, professional look.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -288,8 +481,10 @@
                                          class="card-img-top"
                                          alt="Concrete stairs and entry landing">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>
-                                        <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>
+                                        <h5 class="card-title mb-1">Stamped Concrete Walkway</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Curved stamped concrete walkway featuring a natural stone pattern for a custom, high-end look. Designed for durability and smooth foot traffic while enhancing the home’s landscape and curb appeal.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -301,8 +496,10 @@
                                          class="card-img-top"
                                          alt="Concrete stairs and entry landing">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>
-                                        <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>
+                                        <h5 class="card-title mb-1">Stamped Concrete Patio & Landing</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Decorative stamped concrete landing with a natural stone pattern that adds texture and curb appeal. A durable, low-maintenance surface that creates a welcoming front entry.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -314,34 +511,10 @@
                                          class="card-img-top"
                                          alt="Backyard concrete patio surrounding a fire pit">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- 6 --}}
-                            <div class="portfolio-slide">
-                                <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/final/img-6.jpg') }}"
-                                         class="card-img-top"
-                                         alt="Backyard concrete patio surrounding a fire pit">
-                                    <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- 7 --}}
-                            <div class="portfolio-slide">
-                                <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/final/img-7.jpg') }}"
-                                         class="card-img-top"
-                                         alt="Backyard concrete patio surrounding a fire pit">
-                                    <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
+                                        <h5 class="card-title mb-1">Polished Concrete Slab</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Smooth, polished concrete slab ideal for workshops, garages, or covered entertaining spaces. Provides a clean, durable surface built to handle heavy use while maintaining a sleek, modern appearance.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -359,49 +532,183 @@
         </div>
         <!-- /Portfolio -->
 
-        <!-- Portfolio Lightbox Modal -->
-        <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                <div class="modal-content bg-dark text-white border-0">
-                    <div class="modal-body p-0 position-relative">
 
-                        <!-- Close button -->
-                        <button type="button"
-                                class="close text-white position-absolute portfolio-close"
-                                style="top: 10px; right: 20px; z-index: 20;"
-                                aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-
-                        <!-- Prev / Next arrows -->
-                        <button type="button"
-                                class="portfolio-nav portfolio-prev"
-                                aria-label="Previous image">
+        <!-- Before-After -->
+        <div class="white-back">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-primary">Before &amp; After</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="beforeAfterSlider" class="before-after-slider-wrapper">
+                        <button class="before-after-slider-nav before-after-slider-prev" aria-label="Previous">
                             &#10094;
                         </button>
-
-                        <button type="button"
-                                class="portfolio-nav portfolio-next"
-                                aria-label="Next image">
+                        <button class="before-after-slider-nav before-after-slider-next" aria-label="Next">
                             &#10095;
                         </button>
 
-                        <!-- Main image -->
-                        <img id="portfolioModalImage"
-                             src=""
-                             alt=""
-                             class="img-fluid w-100 d-block">
+                        <div class="before-after-slider-track">
+                            {{-- Set 1 --}}
+                            <div class="before-after-slide">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 before-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-1.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Driveway before">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-secondary">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 after-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-1a.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Driveway after">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-primary">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <!-- Caption area -->
-                        <div class="p-3">
-                            <h5 id="portfolioModalTitle" class="mb-1"></h5>
-                            <p id="portfolioModalCaption" class="small mb-0 text-muted"></p>
+                            {{-- Set 2 --}}
+                            <div class="before-after-slide">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 before-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-2.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Patio before">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-secondary">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 after-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-2a.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Patio after">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-primary">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Set 3 --}}
+                            <div class="before-after-slide">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 before-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-3.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway before">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-secondary">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 after-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-3a.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway after">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-primary">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Set 4 --}}
+                            <div class="before-after-slide">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 before-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-4.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway before">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-secondary">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 after-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-4a.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway after">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-primary">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Add more sets here in the same pattern --}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio Lightbox Modal -->
+        <!-- /Before-After -->
+
+
+        <!-- Before/After Single-Image Lightbox -->
+        <div class="modal fade" id="baImageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content bg-dark text-white border-0">
+                    <div class="modal-body p-3 position-relative" id="baImageModalBody">
+
+                        <!-- Close -->
+                        <button type="button"
+                                class="btn-close btn-close-white position-absolute"
+                                style="top: 10px; right: 20px; z-index: 30;"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+
+                        <!-- Arrows -->
+                        <button type="button"
+                                class="ba-lightbox-nav ba-lightbox-prev"
+                                aria-label="Previous">
+                            &#10094;
+                        </button>
+                        <button type="button"
+                                class="ba-lightbox-nav ba-lightbox-next"
+                                aria-label="Next">
+                            &#10095;
+                        </button>
+
+                        <!-- Image + label -->
+                        <div class="d-flex flex-column align-items-center">
+                            <img id="baLightboxImage"
+                                 src=""
+                                 alt=""
+                                 class="img-fluid ba-lightbox-image mb-2" />
+
+                            <span id="baLightboxLabel" class="badge bg-secondary">
+                    Before
+                </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Before/After Single-Image Lightbox -->
+
+
+
 
 
         @endsection
@@ -418,154 +725,188 @@
             {{-- LIGHTBOX SCRIPT (keep your existing one here, unchanged) --}}
             <script>
                 (function () {
-                    function initPortfolioLightbox() {
-                        // All clickable cards: masonry + slider
-                        var cardNodes = document.querySelectorAll(
-                            '#portfolio .masonry-item .card, ' +
-                            '#portfolioSlider .portfolio-slide .card'
+                    function initBeforeAfterLightbox() {
+                        var sliderWrapper = document.getElementById('beforeAfterSlider');
+                        var modalEl       = document.getElementById('baImageModal');
+                        if (!sliderWrapper || !modalEl) return;
+
+                        var bodyEl   = document.getElementById('baImageModalBody');
+                        var imgEl    = document.getElementById('baLightboxImage');
+                        var labelEl  = document.getElementById('baLightboxLabel');
+                        var prevBtn  = modalEl.querySelector('.ba-lightbox-prev');
+                        var nextBtn  = modalEl.querySelector('.ba-lightbox-next');
+
+                        // Build pairs from slider
+                        var sliderSlides = Array.prototype.slice.call(
+                            sliderWrapper.querySelectorAll('.before-after-slide')
                         );
-                        if (!cardNodes.length) return;
+                        if (!sliderSlides.length) return;
 
-                        var slides = [];
-                        var currentIndex = 0;
+                        var pairs = [];
+                        sliderSlides.forEach(function (slide) {
+                            var beforeImg = slide.querySelector('.before-card img');
+                            var afterImg  = slide.querySelector('.after-card img');
+                            if (!beforeImg || !afterImg) return;
 
-                        // Modal elements
-                        var modalEl      = document.getElementById('portfolioModal');
-                        var modalImage   = document.getElementById('portfolioModalImage');
-                        var modalTitle   = document.getElementById('portfolioModalTitle');
-                        var modalCaption = document.getElementById('portfolioModalCaption');
-                        var prevBtn      = modalEl ? modalEl.querySelector('.portfolio-prev') : null;
-                        var nextBtn      = modalEl ? modalEl.querySelector('.portfolio-next') : null;
-                        var closeBtn     = modalEl ? modalEl.querySelector('.portfolio-close') : null;
+                            var pairIndex = pairs.length;
 
-                        // Build slides array & attach click handlers
-                        cardNodes.forEach(function (card, index) {
-                            var img = card.querySelector('img.card-img-top');
-                            if (!img) return;
-
-                            var titleEl   = card.querySelector('.card-title');
-                            var captionEl = card.querySelector('.card-text');
-
-                            slides.push({
-                                src: img.getAttribute('src'),
-                                alt: img.getAttribute('alt') || '',
-                                title: titleEl ? titleEl.textContent.trim() : '',
-                                caption: captionEl ? captionEl.textContent.trim() : ''
+                            pairs.push({
+                                before: {
+                                    src: beforeImg.getAttribute('src'),
+                                    alt: beforeImg.getAttribute('alt') || ''
+                                },
+                                after: {
+                                    src: afterImg.getAttribute('src'),
+                                    alt: afterImg.getAttribute('alt') || ''
+                                }
                             });
 
-                            // Make whole card clickable
-                            card.style.cursor = 'pointer';
-                            card.dataset.index = index;
+                            // Click handlers — each image opens its own pair
+                            beforeImg.style.cursor = 'pointer';
+                            beforeImg.addEventListener('click', function () {
+                                openModal(pairIndex, 0); // 0 = before
+                            });
 
-                            card.addEventListener('click', function () {
-                                var idx = parseInt(this.dataset.index, 10);
-                                openModal(idx);
+                            afterImg.style.cursor = 'pointer';
+                            afterImg.addEventListener('click', function () {
+                                openModal(pairIndex, 1); // 1 = after
                             });
                         });
 
-                        function showSlide(index) {
-                            if (!slides.length || !modalEl) return;
+                        if (!pairs.length) return;
 
-                            // Wrap index (first/last)
-                            if (index < 0) {
-                                index = slides.length - 1;
-                            } else if (index >= slides.length) {
-                                index = 0;
+                        var currentPairIndex = 0;
+                        var currentSideIndex = 0; // 0 = before, 1 = after
+
+                        function updateBadge() {
+                            if (currentSideIndex === 0) {
+                                labelEl.textContent = 'Before';
+                                labelEl.classList.remove('bg-primary');
+                                labelEl.classList.add('bg-secondary');
+                            } else {
+                                labelEl.textContent = 'After';
+                                labelEl.classList.remove('bg-secondary');
+                                labelEl.classList.add('bg-primary');
                             }
-
-                            currentIndex = index;
-                            var slide = slides[currentIndex];
-
-                            modalImage.src = slide.src;
-                            modalImage.alt = slide.alt;
-                            modalTitle.textContent   = slide.title;
-                            modalCaption.textContent = slide.caption || '';
                         }
 
-                        function openModal(index) {
-                            showSlide(index);
+                        function showCurrent() {
+                            var pair = pairs[currentPairIndex];
+                            var side = currentSideIndex === 0 ? pair.before : pair.after;
 
-                            if (!modalEl) return;
+                            imgEl.src = side.src;
+                            imgEl.alt = side.alt;
+                            updateBadge();
+                        }
 
-                            // Bootstrap 5 style
+                        function nextInPair() {
+                            currentSideIndex = (currentSideIndex + 1) % 2; // 0 -> 1, 1 -> 0
+                            showCurrent();
+                        }
+
+                        function prevInPair() {
+                            currentSideIndex = (currentSideIndex + 1) % 2; // same toggle both ways
+                            showCurrent();
+                        }
+
+                        function openModal(pairIndex, sideIndex) {
+                            currentPairIndex = pairIndex;
+                            currentSideIndex = sideIndex === 1 ? 1 : 0;
+                            showCurrent();
+
                             if (window.bootstrap && bootstrap.Modal) {
                                 var instance = bootstrap.Modal.getOrCreateInstance(modalEl);
                                 instance.show();
-                                return;
+                            } else {
+                                modalEl.classList.add('show');
+                                modalEl.style.display = 'block';
+                                modalEl.removeAttribute('aria-hidden');
+                                document.body.classList.add('modal-open');
                             }
-
-                            // Fallback if no Bootstrap modal JS
-                            modalEl.classList.add('show');
-                            modalEl.style.display = 'block';
-                            modalEl.removeAttribute('aria-hidden');
-                            document.body.classList.add('modal-open');
                         }
 
-                        function closeModal() {
-                            if (!modalEl) return;
+                        // Arrows: just flip between before/after in the current pair
+                        if (nextBtn) nextBtn.addEventListener('click', nextInPair);
+                        if (prevBtn) prevBtn.addEventListener('click', prevInPair);
 
-                            // Bootstrap 5 style
-                            if (window.bootstrap && bootstrap.Modal) {
-                                var instance = bootstrap.Modal.getInstance(modalEl)
-                                    || bootstrap.Modal.getOrCreateInstance(modalEl);
-                                instance.hide();
-                                return;
-                            }
-
-                            // Fallback
-                            modalEl.classList.remove('show');
-                            modalEl.style.display = 'none';
-                            modalEl.setAttribute('aria-hidden', 'true');
-                            document.body.classList.remove('modal-open');
-
-                            // Remove any backdrops if they exist
-                            var backs = document.querySelectorAll('.modal-backdrop');
-                            backs.forEach(function (b) { b.parentNode.removeChild(b); });
-                        }
-
-                        // Prev / Next buttons
-                        if (prevBtn) {
-                            prevBtn.addEventListener('click', function () {
-                                showSlide(currentIndex - 1);
-                            });
-                        }
-
-                        if (nextBtn) {
-                            nextBtn.addEventListener('click', function () {
-                                showSlide(currentIndex + 1);
-                            });
-                        }
-
-                        // Close button (the X)
-                        if (closeBtn) {
-                            closeBtn.addEventListener('click', function () {
-                                closeModal();
-                            });
-                        }
-
-                        // Keyboard navigation
+                        // Keyboard left/right within the pair
                         document.addEventListener('keydown', function (e) {
-                            if (!modalEl) return;
-                            var isOpen = modalEl.classList.contains('show');
-                            if (!isOpen) return;
+                            if (!modalEl.classList.contains('show')) return;
 
                             if (e.key === 'ArrowLeft') {
-                                showSlide(currentIndex - 1);
+                                prevInPair();
                             } else if (e.key === 'ArrowRight') {
-                                showSlide(currentIndex + 1);
-                            } else if (e.key === 'Escape') {
-                                closeModal();
+                                nextInPair();
                             }
+                        });
+
+                        // Swipe / drag inside modal body
+                        var startX = 0;
+                        var startY = 0;
+                        var isPointerDown = false;
+                        var SWIPE_THRESHOLD = 40;
+
+                        function startDrag(clientX, clientY, target) {
+                            // Don't start from arrows or close button
+                            if (target && target.closest && (target.closest('.ba-lightbox-nav') || target.closest('.btn-close'))) {
+                                return;
+                            }
+                            isPointerDown = true;
+                            startX = clientX;
+                            startY = clientY;
+                        }
+
+                        function endDrag(clientX, clientY) {
+                            if (!isPointerDown) return;
+                            isPointerDown = false;
+
+                            var dx = clientX - startX;
+                            var dy = clientY - startY;
+
+                            if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) {
+                                return;
+                            }
+
+                            if (dx < 0) {
+                                nextInPair();
+                            } else {
+                                prevInPair();
+                            }
+                        }
+
+                        // Touch
+                        bodyEl.addEventListener('touchstart', function (e) {
+                            if (!e.touches || !e.touches.length) return;
+                            var t = e.touches[0];
+                            startDrag(t.clientX, t.clientY, e.target);
+                        }, { passive: true });
+
+                        bodyEl.addEventListener('touchend', function (e) {
+                            if (!e.changedTouches || !e.changedTouches.length) return;
+                            var t = e.changedTouches[0];
+                            endDrag(t.clientX, t.clientY);
+                        });
+
+                        // Mouse
+                        bodyEl.addEventListener('mousedown', function (e) {
+                            e.preventDefault();
+                            startDrag(e.clientX, e.clientY, e.target);
+                        });
+
+                        window.addEventListener('mouseup', function (e) {
+                            endDrag(e.clientX, e.clientY);
                         });
                     }
 
                     if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', initPortfolioLightbox);
+                        document.addEventListener('DOMContentLoaded', initBeforeAfterLightbox);
                     } else {
-                        initPortfolioLightbox();
+                        initBeforeAfterLightbox();
                     }
                 })();
             </script>
+
+
 
             {{-- PORTFOLIO SLIDER SCRIPT (with swipe/drag) --}}
             <script>
@@ -764,6 +1105,358 @@
                     }
                 })();
             </script>
+
+            {{-- BEFORE AFTER SLIDER (with swipe/drag) --}}
+            <script>
+                (function () {
+                    function initBeforeAfterSlider() {
+                        var wrapper = document.getElementById('beforeAfterSlider');
+                        if (!wrapper) return;
+
+                        var track  = wrapper.querySelector('.before-after-slider-track');
+                        var slides = Array.prototype.slice.call(
+                            wrapper.querySelectorAll('.before-after-slide')
+                        );
+                        if (!slides.length) return;
+
+                        var prevBtn = wrapper.querySelector('.before-after-slider-prev');
+                        var nextBtn = wrapper.querySelector('.before-after-slider-next');
+
+                        var currentIndex   = 0;
+                        var isDragging     = false;
+                        var startX         = 0;
+                        var baseTranslate  = 0;
+
+                        function getSlideWidth() {
+                            return wrapper.clientWidth; // each slide is 100% width
+                        }
+
+                        function setTranslate(x) {
+                            track.style.transform = 'translateX(' + x + 'px)';
+                        }
+
+                        function goTo(index) {
+                            if (!slides.length) return;
+
+                            if (index < 0) {
+                                index = slides.length - 1;
+                            } else if (index >= slides.length) {
+                                index = 0;
+                            }
+
+                            currentIndex = index;
+
+                            var offset = -currentIndex * getSlideWidth();
+                            // use smooth transition
+                            track.classList.remove('no-transition');
+                            setTranslate(offset);
+                        }
+
+                        function next() {
+                            goTo(currentIndex + 1);
+                        }
+
+                        function prev() {
+                            goTo(currentIndex - 1);
+                        }
+
+                        // --- Arrows ---
+                        if (nextBtn) {
+                            nextBtn.addEventListener('click', next);
+                        }
+                        if (prevBtn) {
+                            prevBtn.addEventListener('click', prev);
+                        }
+
+                        // --- Drag helpers ---
+                        var DRAG_THRESHOLD_RATIO = 0.15; // 15% of width
+
+                        function startDrag(clientX, target) {
+                            // don’t start drag on nav buttons
+                            if (target && target.closest && target.closest('.before-after-slider-nav')) {
+                                return;
+                            }
+
+                            isDragging = true;
+                            startX = clientX;
+                            baseTranslate = -currentIndex * getSlideWidth();
+
+                            // disable transition while dragging
+                            track.classList.add('no-transition');
+                        }
+
+                        function moveDrag(clientX) {
+                            if (!isDragging) return;
+
+                            var dx = clientX - startX;
+                            var newTranslate = baseTranslate + dx;
+                            setTranslate(newTranslate);
+                        }
+
+                        function endDrag(clientX) {
+                            if (!isDragging) return;
+                            isDragging = false;
+
+                            var dx = clientX - startX;
+                            var slideWidth = getSlideWidth();
+                            var threshold = slideWidth * DRAG_THRESHOLD_RATIO;
+
+                            if (dx < -threshold) {
+                                // dragged left enough -> next
+                                currentIndex++;
+                            } else if (dx > threshold) {
+                                // dragged right enough -> prev
+                                currentIndex--;
+                            }
+
+                            goTo(currentIndex);
+                        }
+
+                        // --- Touch events ---
+                        wrapper.addEventListener('touchstart', function (e) {
+                            if (!e.touches || !e.touches.length) return;
+                            var t = e.touches[0];
+                            startDrag(t.clientX, e.target);
+                        }, { passive: true });
+
+                        wrapper.addEventListener('touchmove', function (e) {
+                            if (!isDragging || !e.touches || !e.touches.length) return;
+                            var t = e.touches[0];
+                            moveDrag(t.clientX);
+                        }, { passive: false });
+
+                        wrapper.addEventListener('touchend', function (e) {
+                            if (!e.changedTouches || !e.changedTouches.length) return;
+                            var t = e.changedTouches[0];
+                            endDrag(t.clientX);
+                        });
+
+                        // --- Mouse events ---
+                        wrapper.addEventListener('mousedown', function (e) {
+                            e.preventDefault(); // prevent text/image selection
+                            startDrag(e.clientX, e.target);
+                        });
+
+                        window.addEventListener('mousemove', function (e) {
+                            if (!isDragging) return;
+                            moveDrag(e.clientX);
+                        });
+
+                        window.addEventListener('mouseup', function (e) {
+                            if (!isDragging) return;
+                            endDrag(e.clientX);
+                        });
+
+                        // Realign on resize
+                        window.addEventListener('resize', function () {
+                            goTo(currentIndex);
+                        });
+
+                        // Init position
+                        goTo(0);
+                    }
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initBeforeAfterSlider);
+                    } else {
+                        initBeforeAfterSlider();
+                    }
+                })();
+            </script>
+
+
+            {{-- BEFORE AFTER MODAL --}}
+            <script>
+                (function () {
+                    function initBeforeAfterModal() {
+                        var sliderWrapper = document.getElementById('beforeAfterSlider');
+                        var modalEl       = document.getElementById('beforeAfterModal');
+                        if (!sliderWrapper || !modalEl) return;
+
+                        var slides = Array.prototype.slice.call(
+                            sliderWrapper.querySelectorAll('.before-after-slide')
+                        );
+                        if (!slides.length) return;
+
+                        // Collect pairs
+                        var pairs = [];
+                        slides.forEach(function (slide, index) {
+                            var beforeImg = slide.querySelector('.before-card img');
+                            var afterImg  = slide.querySelector('.after-card img');
+                            if (!beforeImg || !afterImg) return;
+
+                            pairs.push({
+                                beforeSrc: beforeImg.getAttribute('src'),
+                                beforeAlt: beforeImg.getAttribute('alt') || '',
+                                afterSrc: afterImg.getAttribute('src'),
+                                afterAlt: afterImg.getAttribute('alt') || ''
+                            });
+
+                            // Click either card opens modal for this index
+                            slide.querySelectorAll('.before-card, .after-card').forEach(function (card) {
+                                card.style.cursor = 'pointer';
+                                card.addEventListener('click', function () {
+                                    openModal(index);
+                                });
+                            });
+                        });
+
+                        if (!pairs.length) return;
+
+                        var beforeImgEl = document.getElementById('baModalBeforeImage');
+                        var afterImgEl  = document.getElementById('baModalAfterImage');
+                        var prevBtn     = modalEl.querySelector('.before-after-modal-prev');
+                        var nextBtn     = modalEl.querySelector('.before-after-modal-next');
+                        var closeBtn    = modalEl.querySelector('.btn-close');
+                        var bodyEl      = document.getElementById('beforeAfterModalBody');
+
+                        var currentIndex = 0;
+                        var modalInstance = null;
+
+                        function showPair(index) {
+                            if (index < 0) {
+                                index = pairs.length - 1;
+                            } else if (index >= pairs.length) {
+                                index = 0;
+                            }
+                            currentIndex = index;
+
+                            var pair = pairs[currentIndex];
+                            beforeImgEl.src = pair.beforeSrc;
+                            beforeImgEl.alt = pair.beforeAlt;
+                            afterImgEl.src  = pair.afterSrc;
+                            afterImgEl.alt  = pair.afterAlt;
+                        }
+
+                        function openModal(index) {
+                            showPair(index);
+
+                            if (window.bootstrap && bootstrap.Modal) {
+                                modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+                                modalInstance.show();
+                            } else {
+                                modalEl.classList.add('show');
+                                modalEl.style.display = 'block';
+                                modalEl.removeAttribute('aria-hidden');
+                                document.body.classList.add('modal-open');
+                            }
+                        }
+
+                        function closeModal() {
+                            if (window.bootstrap && bootstrap.Modal) {
+                                (bootstrap.Modal.getInstance(modalEl) || bootstrap.Modal.getOrCreateInstance(modalEl)).hide();
+                            } else {
+                                modalEl.classList.remove('show');
+                                modalEl.style.display = 'none';
+                                modalEl.setAttribute('aria-hidden', 'true');
+                                document.body.classList.remove('modal-open');
+                                document.querySelectorAll('.modal-backdrop').forEach(function (b) { b.remove(); });
+                            }
+                        }
+
+                        if (prevBtn) {
+                            prevBtn.addEventListener('click', function () {
+                                showPair(currentIndex - 1);
+                            });
+                        }
+                        if (nextBtn) {
+                            nextBtn.addEventListener('click', function () {
+                                showPair(currentIndex + 1);
+                            });
+                        }
+                        if (closeBtn) {
+                            closeBtn.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        // Mouse wheel scroll inside modal
+                        bodyEl.addEventListener('wheel', function (e) {
+                            var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+
+                            if (Math.abs(delta) < 5) return;
+
+                            e.preventDefault();
+                            if (delta > 0) {
+                                showPair(currentIndex + 1);
+                            } else {
+                                showPair(currentIndex - 1);
+                            }
+                        }, { passive: false });
+
+
+                        // Keyboard nav
+                        document.addEventListener('keydown', function (e) {
+                            if (!modalEl.classList.contains('show')) return;
+
+                            if (e.key === 'ArrowLeft') {
+                                showPair(currentIndex - 1);
+                            } else if (e.key === 'ArrowRight') {
+                                showPair(currentIndex + 1);
+                            } else if (e.key === 'Escape') {
+                                closeModal();
+                            }
+                        });
+
+                        // Swipe / drag inside modal
+                        var startX = 0;
+                        var startY = 0;
+                        var isPointerDown = false;
+                        var SWIPE_THRESHOLD = 40;
+
+                        function onPointerDown(cx, cy) {
+                            isPointerDown = true;
+                            startX = cx;
+                            startY = cy;
+                        }
+
+                        function onPointerUp(cx, cy) {
+                            if (!isPointerDown) return;
+                            isPointerDown = false;
+
+                            var dx = cx - startX;
+                            var dy = cy - startY;
+
+                            if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) {
+                                return;
+                            }
+
+                            if (dx < 0) {
+                                showPair(currentIndex + 1);
+                            } else {
+                                showPair(currentIndex - 1);
+                            }
+                        }
+
+                        bodyEl.addEventListener('touchstart', function (e) {
+                            if (!e.touches || !e.touches.length) return;
+                            var t = e.touches[0];
+                            onPointerDown(t.clientX, t.clientY);
+                        }, { passive: true });
+
+                        bodyEl.addEventListener('touchend', function (e) {
+                            if (!e.changedTouches || !e.changedTouches.length) return;
+                            var t = e.changedTouches[0];
+                            onPointerUp(t.clientX, t.clientY);
+                        });
+
+                        bodyEl.addEventListener('mousedown', function (e) {
+                            onPointerDown(e.clientX, e.clientY);
+                        });
+
+                        window.addEventListener('mouseup', function (e) {
+                            onPointerUp(e.clientX, e.clientY);
+                        });
+                    }
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initBeforeAfterModal);
+                    } else {
+                        initBeforeAfterModal();
+                    }
+                })();
+            </script>
+
 
         @endsection
 

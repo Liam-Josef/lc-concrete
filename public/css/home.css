@@ -56,3 +56,24 @@ body {
     background: rgba(0,0,0,.25);  /* optional: improve contrast */
     border-radius: .375rem;
 }
+
+/* default (closed) */
+.navbar.bg-primary-transparent{
+    background: rgba(255,255,255,0.35); /* your opacity look */
+    backdrop-filter: blur(6px);          /* optional, looks nice */
+    transition: background-color .2s ease, background .2s ease;
+}
+
+/* when menu is open */
+.navbar.nav-open{
+    background: #fff !important;         /* solid white */
+    backdrop-filter: none;
+}
+
+/* optional: when white bg, make links readable */
+.navbar.nav-open .nav-link{
+    color: #0b1b6a !important; /* pick your brand color */
+}
+.navbar.nav-open .nav-link.active{
+    font-weight: 700;
+}

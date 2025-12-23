@@ -322,11 +322,15 @@
 
                         // Modal elements
                         var modalEl      = document.getElementById('portfolioModal');
+                        if (!modalEl) return;
+
                         var modalImage   = document.getElementById('portfolioModalImage');
                         var modalTitle   = document.getElementById('portfolioModalTitle');
                         var modalCaption = document.getElementById('portfolioModalCaption');
-                        var prevBtn      = modalEl ? modalEl.querySelector('.portfolio-prev') : null;
-                        var nextBtn      = modalEl ? modalEl.querySelector('.portfolio-next') : null;
+                        var prevBtn      = modalEl.querySelector('.portfolio-prev');
+                        var nextBtn      = modalEl.querySelector('.portfolio-next');
+                        var closeBtn     = modalEl.querySelector('.portfolio-close');
+                        var bodyEl       = modalEl.querySelector('.modal-body');
 
                         // Build slides array & attach click handlers
                         itemNodes.forEach(function (item, index) {
@@ -345,7 +349,7 @@
 
                             // Make images clickable and remember index
                             img.style.cursor = 'pointer';
-                            img.dataset.index = index;
+                            img.dataset.index = slides.length - 1; // use slides index
 
                             img.addEventListener('click', function () {
                                 var idx = parseInt(this.dataset.index, 10);
@@ -375,20 +379,17 @@
                         function openModal(index) {
                             showSlide(index);
 
-                            if (!modalEl) return;
-
-                            // Bootstrap 5 (no jQuery)
+                            // Bootstrap 5
                             if (window.bootstrap && bootstrap.Modal) {
                                 var instance = bootstrap.Modal.getOrCreateInstance(modalEl);
                                 instance.show();
-                                return;
+                            } else {
+                                // Fallback: basic manual show if Bootstrap JS not wired
+                                modalEl.classList.add('show');
+                                modalEl.style.display = 'block';
+                                modalEl.removeAttribute('aria-hidden');
+                                document.body.classList.add('modal-open');
                             }
-
-                            // Fallback: basic manual show if Bootstrap JS not wired
-                            modalEl.classList.add('show');
-                            modalEl.style.display = 'block';
-                            modalEl.removeAttribute('aria-hidden');
-                            document.body.classList.add('modal-open');
                         }
 
                         // Prev / Next buttons
@@ -406,7 +407,6 @@
 
                         // Optional: keyboard navigation (left/right arrows)
                         document.addEventListener('keydown', function (e) {
-                            if (!modalEl) return;
                             var isOpen = modalEl.classList.contains('show');
                             if (!isOpen) return;
 
@@ -415,6 +415,70 @@
                             } else if (e.key === 'ArrowRight') {
                                 showSlide(currentIndex + 1);
                             }
+                        });
+
+                        // --- Swipe / drag navigation (mouse + touch) ---
+                        var startX = 0;
+                        var startY = 0;
+                        var isPointerDown = false;
+                        var SWIPE_THRESHOLD = 40; // px
+
+                        function startDrag(clientX, clientY, target) {
+                            // Don't start drag from arrows or close button
+                            if (target && target.closest &&
+                                (target.closest('.portfolio-nav') || target.closest('.portfolio-close'))) {
+                                return;
+                            }
+                            isPointerDown = true;
+                            startX = clientX;
+                            startY = clientY;
+                        }
+
+                        function endDrag(clientX, clientY) {
+                            if (!isPointerDown) return;
+                            isPointerDown = false;
+
+                            var dx = clientX - startX;
+                            var dy = clientY - startY;
+
+                            // Only care about mostly horizontal, big enough movement
+                            if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy)) {
+                                return;
+                            }
+
+                            if (dx < 0) {
+                                // drag left -> next
+                                showSlide(currentIndex + 1);
+                            } else {
+                                // drag right -> prev
+                                showSlide(currentIndex - 1);
+                            }
+                        }
+
+                        // Touch events
+                        if (bodyEl) {
+                            bodyEl.addEventListener('touchstart', function (e) {
+                                if (!e.touches || !e.touches.length) return;
+                                var t = e.touches[0];
+                                startDrag(t.clientX, t.clientY, e.target);
+                            }, { passive: true });
+
+                            bodyEl.addEventListener('touchend', function (e) {
+                                if (!e.changedTouches || !e.changedTouches.length) return;
+                                var t = e.changedTouches[0];
+                                endDrag(t.clientX, t.clientY);
+                            });
+
+                            // Mouse events
+                            bodyEl.addEventListener('mousedown', function (e) {
+                                e.preventDefault(); // avoid text selection
+                                startDrag(e.clientX, e.clientY, e.target);
+                            });
+                        }
+
+                        window.addEventListener('mouseup', function (e) {
+                            if (!isPointerDown) return;
+                            endDrag(e.clientX, e.clientY);
                         });
                     }
 
@@ -427,6 +491,7 @@
                 })();
             </script>
         @endsection
+
 
 
 </x-home-fullscreen-index>
