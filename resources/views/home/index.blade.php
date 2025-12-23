@@ -551,6 +551,34 @@
                         </button>
 
                         <div class="before-after-slider-track">
+
+
+                            {{-- Set 4 --}}
+                            <div class="before-after-slide">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 before-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-5.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway before">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-secondary">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 after-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-5a.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway after">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-primary">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             {{-- Set 1 --}}
                             <div class="before-after-slide">
                                 <div class="row g-3">
@@ -619,32 +647,6 @@
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 after-card">
                                             <img src="{{ asset('storage/portfolio/before-after/before-after-3a.jpg') }}"
-                                                 class="card-img-top"
-                                                 alt="Walkway after">
-                                            <div class="card-body p-2 text-center">
-                                                <span class="badge bg-primary">After</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- Set 4 --}}
-                            <div class="before-after-slide">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 before-card">
-                                            <img src="{{ asset('storage/portfolio/before-after/before-after-4.jpg') }}"
-                                                 class="card-img-top"
-                                                 alt="Walkway before">
-                                            <div class="card-body p-2 text-center">
-                                                <span class="badge bg-secondary">Before</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 after-card">
-                                            <img src="{{ asset('storage/portfolio/before-after/before-after-4a.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Walkway after">
                                             <div class="card-body p-2 text-center">
