@@ -451,8 +451,10 @@
                                          class="card-img-top"
                                          alt="Freshly poured concrete driveway in front of a home">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">New Concrete Driveway</h5>
-                                        <p class="card-text small text-muted mb-0">Clean, durable finish for everyday use.</p>
+                                        <h5 class="card-title mb-1">Stamped Concrete Slab</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Decorative stamped concrete driveway featuring a textured stone-style pattern for added traction and visual appeal. Combines durability with an upscale look that elevates curb appeal.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -464,8 +466,10 @@
                                          class="card-img-top"
                                          alt="Stamped concrete patio with outdoor furniture">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Stamped Concrete Patio</h5>
-                                        <p class="card-text small text-muted mb-0">Stamped pattern to mimic stone.</p>
+                                        <h5 class="card-title mb-1">Smooth-Finish Concrete Slab</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Freshly poured smooth-finish concrete slab for a clean, durable surface that’s perfect for garage aprons and driveway extensions. Built for long-lasting performance with a crisp, professional look.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -477,8 +481,10 @@
                                          class="card-img-top"
                                          alt="Concrete stairs and entry landing">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>
-                                        <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>
+                                        <h5 class="card-title mb-1">Stamped Concrete Walkway</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Curved stamped concrete walkway featuring a natural stone pattern for a custom, high-end look. Designed for durability and smooth foot traffic while enhancing the home’s landscape and curb appeal.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -490,8 +496,10 @@
                                          class="card-img-top"
                                          alt="Concrete stairs and entry landing">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Entry Stairs &amp; Landing</h5>
-                                        <p class="card-text small text-muted mb-0">Safe, level steps to the front door.</p>
+                                        <h5 class="card-title mb-1">Stamped Concrete Patio & Landing</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Decorative stamped concrete landing with a natural stone pattern that adds texture and curb appeal. A durable, low-maintenance surface that creates a welcoming front entry.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -503,34 +511,10 @@
                                          class="card-img-top"
                                          alt="Backyard concrete patio surrounding a fire pit">
                                     <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- 6 --}}
-                            <div class="portfolio-slide">
-                                <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/final/img-6.jpg') }}"
-                                         class="card-img-top"
-                                         alt="Backyard concrete patio surrounding a fire pit">
-                                    <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- 7 --}}
-                            <div class="portfolio-slide">
-                                <div class="card border-0 shadow-sm h-100">
-                                    <img src="{{ asset('storage/portfolio/final/img-7.jpg') }}"
-                                         class="card-img-top"
-                                         alt="Backyard concrete patio surrounding a fire pit">
-                                    <div class="card-body p-3">
-                                        <h5 class="card-title mb-1">Backyard Entertaining Space</h5>
-                                        <p class="card-text small text-muted mb-0">Perfect for gatherings &amp; BBQs.</p>
+                                        <h5 class="card-title mb-1">Polished Concrete Slab</h5>
+                                        <p class="card-text small text-muted mb-0">
+                                            Smooth, polished concrete slab ideal for workshops, garages, or covered entertaining spaces. Provides a clean, durable surface built to handle heavy use while maintaining a sleek, modern appearance.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -572,7 +556,7 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 before-card">
-                                            <img src="{{ asset('storage/portfolio/port-images/img-11.jpg') }}"
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-1.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Driveway before">
                                             <div class="card-body p-2 text-center">
@@ -582,7 +566,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 after-card">
-                                            <img src="{{ asset('storage/portfolio/final/img-2.jpg') }}"
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-1a.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Driveway after">
                                             <div class="card-body p-2 text-center">
@@ -598,7 +582,7 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 before-card">
-                                            <img src="{{ asset('storage/portfolio/port-images/img-12.jpg') }}"
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-2.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Patio before">
                                             <div class="card-body p-2 text-center">
@@ -608,7 +592,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 after-card">
-                                            <img src="{{ asset('storage/portfolio/final/img-5.jpg') }}"
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-2a.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Patio after">
                                             <div class="card-body p-2 text-center">
@@ -624,7 +608,7 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 before-card">
-                                            <img src="{{ asset('storage/portfolio/port-images/img-13.jpg') }}"
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-3.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Walkway before">
                                             <div class="card-body p-2 text-center">
@@ -634,7 +618,33 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card border-0 shadow-sm h-100 after-card">
-                                            <img src="{{ asset('storage/portfolio/final/img-6.jpg') }}"
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-3a.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway after">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-primary">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Set 4 --}}
+                            <div class="before-after-slide">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 before-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-4.jpg') }}"
+                                                 class="card-img-top"
+                                                 alt="Walkway before">
+                                            <div class="card-body p-2 text-center">
+                                                <span class="badge bg-secondary">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 shadow-sm h-100 after-card">
+                                            <img src="{{ asset('storage/portfolio/before-after/before-after-4a.jpg') }}"
                                                  class="card-img-top"
                                                  alt="Walkway after">
                                             <div class="card-body p-2 text-center">
